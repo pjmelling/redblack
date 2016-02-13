@@ -5,7 +5,7 @@ require 'redblack/version'
 
 Gem::Specification.new do |spec|
   spec.name          = "redblack"
-  spec.version       = Redblack::VERSION
+  spec.version       = RedBlack::VERSION
   spec.authors       = ["Peter Melling"]
   spec.email         = ["pjmelling@gmail.com"]
 

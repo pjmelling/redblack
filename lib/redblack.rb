@@ -1,5 +1,5 @@
 require "redblack/version"
 
-module Redblack
+module RedBlack
   # Your code goes here...
 end
