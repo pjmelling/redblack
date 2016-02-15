@@ -21,19 +21,42 @@ module RedBlack
     def delete
     end
 
-    def search
+    def search(node, k)
+      return node if node == nil or k == node.k
+
+      k < node.k ? search(node.left, k) : search(node.right, k)
     end
 
     def predecessor
     end
 
-    def successor
+    def successor(node)
+      return minimum(node.right) if node.right != nil
+
+      y = node.p
+
+      while y != nil and node == node.right
+        node = y
+        y = y.p
+      end
+
+      return y
     end
 
-    def minimum
+    def minimum(node)
+      while node.left != nil
+        node = node.left
+      end
+
+      return node
     end
 
-    def maximum
+    def maximum(node)
+      while node.right != nil
+        node = node.right
+      end
+
+      return node
     end
 
     def inorder_tree_walk(node)
