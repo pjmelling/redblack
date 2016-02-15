@@ -36,7 +36,12 @@ module RedBlack
     def maximum
     end
 
-    def inorder_tree_walk
+    def inorder_tree_walk(node)
+      if node != nil
+        inorder_tree_walk(node.left)
+        puts node.key
+        inorder_tree_walk(node.right)
+      end
     end
   end
 end
